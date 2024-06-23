@@ -83,7 +83,7 @@ let optionSorter = (options) => {
 /* QOL Funcs
 /* ================================================================ */
 let sheetPage = (id, pageName) => {
-    return `https://docs.google.com/spreadsheets/d/1FY_rRAjMvVmegUJs6G1dbmtHUFvuP7VdVPO1P2Kulxw/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=Masterlist`
+    return `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=${pageName}`
 };
 
 let fetchSheet = async (page, sheet = sheetID) => {
