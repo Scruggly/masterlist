@@ -10,14 +10,14 @@ let sheetID = "1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
 /* ------------------------------------------------------------------- */
 let sheetPages = {
 
-    masterlist: "masterlist",
-    masterlistLog: "masterlist log",
+    masterlist: "Masterlist",
+    masterlistLog: "Masterlist Log",
     inventory: "inventory",
     inventoryLog: "inventory log",
     items: "items",
     traits: "traits",
-    prompts: "prompts",
-    faq: "faq",
+    prompts: "Prompts",
+    faq: "FAQ",
     staff: "mods",
 
 }
@@ -49,7 +49,7 @@ let options = {
     /* --------------------------------------------------------------- */
     masterlist: {
 
-        sheetPage: sheetPages.masterlist,
+        sheetPage: sheetPages.Masterlist,
         logSheetPage: sheetPages.masterlistLog,
 
         itemAmount: 12,
