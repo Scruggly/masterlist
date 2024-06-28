@@ -2,7 +2,7 @@
 /* Sheet ID
 /* Your sheet ID
 /* ------------------------------------------------------------------- */
-let sheetID = "1kctL7PMwFAztPHs3dCcZvwAo_il4cKYYcltf9l0bTT4";
+let sheetID = "1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
 
 
 /* ------------------------------------------------------------------- */
@@ -10,8 +10,8 @@ let sheetID = "1kctL7PMwFAztPHs3dCcZvwAo_il4cKYYcltf9l0bTT4";
 /* ------------------------------------------------------------------- */
 let sheetPages = {
 
-    masterlist: "Masterlist Log",
-    masterlistLog: "Masterlist",
+    masterlist: "Masterlist",
+    masterlistLog: "Masterlist Log",
     inventory: "inventory",
     inventoryLog: "inventory log",
     items: "items",
