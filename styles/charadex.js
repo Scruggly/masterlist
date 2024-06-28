@@ -56,14 +56,14 @@ const scrubData = (sheetData) => {
 let optionSorter = (options) => {
 
     // Clean up the sheetID - in case they used a link instead
-    let scrubbedSheetId = sheetID ? sheetID.includes('/d/') ? sheetID.split('/d/')[1].split('/edit')[0] : sheetID : "1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
+    let scrubbedSheetId = sheetID ? sheetID.includes('/d/') ? sheetID.split('/d/')[1].split('/edit')[0] : sheetID : "/d/1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
 
     // Call all options, make defaults of our own
     let userOptions = options;
     let defaultOptions = {
 
         sheetID: scrubbedSheetId,
-        sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "Masterlist",
+        sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "masterlist",
 
         fauxFolderColumn: userOptions.fauxFolderColumn ? keyCreator(userOptions.fauxFolderColumn) : false,
         filterColumn: userOptions.filterColumn ? keyCreator(userOptions.filterColumn) : false,
@@ -83,10 +83,10 @@ let optionSorter = (options) => {
 /* QOL Funcs
 /* ================================================================ */
 let sheetPage = (id, pageName) => {
-    return `https://docs.google.com/spreadsheets/d/1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=Masterlist`
+    return `https://docs.google.com/spreadsheets/d/1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=masterlist`
 };
 
-let fetchSheet = async (page, sheet = sheetID) => {
+let fetchSheet = async (page, sheet = 1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64) => {
     const JSON = await fetch(sheetPage(sheet, page)).then(i => i.text());
     return scrubData(JSON);
 }
