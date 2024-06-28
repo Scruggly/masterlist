@@ -2,7 +2,7 @@
 /* Sheet ID
 /* Your sheet ID
 /* ------------------------------------------------------------------- */
-let sheetID = "1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
+let sheetID = "1GwgfLizD3HQCieGia6di-TfU4E3EipT9Jb0BDZQwNak";
 
 
 /* ------------------------------------------------------------------- */
@@ -10,14 +10,14 @@ let sheetID = "1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
 /* ------------------------------------------------------------------- */
 let sheetPages = {
 
-    masterlist: "Masterlist",
-    masterlistLog: "Masterlist Log",
+    masterlist: "masterlist",
+    masterlistLog: "masterlist log",
     inventory: "inventory",
     inventoryLog: "inventory log",
     items: "items",
     traits: "traits",
-    prompts: "Prompts",
-    faq: "FAQ",
+    prompts: "prompts",
+    faq: "faq",
     staff: "mods",
 
 }
@@ -49,7 +49,7 @@ let options = {
     /* --------------------------------------------------------------- */
     masterlist: {
 
-        sheetPage: sheetPages.Masterlist,
+        sheetPage: sheetPages.masterlist,
         logSheetPage: sheetPages.masterlistLog,
 
         itemAmount: 12,

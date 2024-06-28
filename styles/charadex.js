@@ -56,7 +56,7 @@ const scrubData = (sheetData) => {
 let optionSorter = (options) => {
 
     // Clean up the sheetID - in case they used a link instead
-    let scrubbedSheetId = sheetID ? sheetID.includes('/d/') ? sheetID.split('/d/')[1].split('/edit')[0] : sheetID : "1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64";
+    let scrubbedSheetId = sheetID ? sheetID.includes('/d/') ? sheetID.split('/d/')[1].split('/edit')[0] : sheetID : "1l_F95Zhyj5OPQ0zs-54pqacO6bVDiH4rlh16VhPNFUc";
 
     // Call all options, make defaults of our own
     let userOptions = options;
@@ -83,10 +83,10 @@ let optionSorter = (options) => {
 /* QOL Funcs
 /* ================================================================ */
 let sheetPage = (id, pageName) => {
-    return `https://docs.google.com/spreadsheets/d/1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=masterlist`
+    return `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=${pageName}`
 };
 
-let fetchSheet = async (page, sheet = 1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64) => {
+let fetchSheet = async (page, sheet = sheetID) => {
     const JSON = await fetch(sheetPage(sheet, page)).then(i => i.text());
     return scrubData(JSON);
 }
@@ -306,8 +306,8 @@ let prevNextLinks = (array, url, params, currParam, key, altkey = false) => {
             $("#entryNext i").remove();
         }
 
-        // Back to  (keeps species parameter)
-        $("#Link").attr("href", url);
+        // Back to masterlist (keeps species parameter)
+        $("#masterlistLink").attr("href", url);
         $('#prevNext').show();
 
     }
