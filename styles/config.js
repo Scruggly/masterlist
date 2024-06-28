@@ -10,8 +10,8 @@ let sheetID = "1kctL7PMwFAztPHs3dCcZvwAo_il4cKYYcltf9l0bTT4";
 /* ------------------------------------------------------------------- */
 let sheetPages = {
 
-    masterlist: "Masterlist",
-    masterlistLog: "Masterlist Log",
+    masterlist: "Masterlist Log",
+    masterlistLog: "Masterlist",
     inventory: "inventory",
     inventoryLog: "inventory log",
     items: "items",
