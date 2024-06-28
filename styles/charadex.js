@@ -63,7 +63,7 @@ let optionSorter = (options) => {
     let defaultOptions = {
 
         sheetID: scrubbedSheetId,
-        sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "Masterlist",
+        sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "Masterlist Log",
 
         fauxFolderColumn: userOptions.fauxFolderColumn ? keyCreator(userOptions.fauxFolderColumn) : false,
         filterColumn: userOptions.filterColumn ? keyCreator(userOptions.filterColumn) : false,
@@ -83,7 +83,7 @@ let optionSorter = (options) => {
 /* QOL Funcs
 /* ================================================================ */
 let sheetPage = (id, pageName) => {
-    return `https://docs.google.com/spreadsheets/d/1kctL7PMwFAztPHs3dCcZvwAo_il4cKYYcltf9l0bTT4/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=Masterlist`
+    return `https://docs.google.com/spreadsheets/d/1kctL7PMwFAztPHs3dCcZvwAo_il4cKYYcltf9l0bTT4/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=Masterlist Log`
 };
 
 let fetchSheet = async (page, sheet = sheetID) => {
@@ -306,8 +306,8 @@ let prevNextLinks = (array, url, params, currParam, key, altkey = false) => {
             $("#entryNext i").remove();
         }
 
-        // Back to masterlist (keeps species parameter)
-        $("#masterlistLink").attr("href", url);
+        // Back to  (keeps species parameter)
+        $("#Link").attr("href", url);
         $('#prevNext').show();
 
     }
@@ -712,7 +712,7 @@ const frontPage = (options) => {
             if (charadexInfo.numOfDesigns != 0) {
 
                 // Grab dah sheet
-                let designs = await fetchSheet(charadexInfo.masterlistSheetPage);
+                let designs = await fetchSheet(charadexInfo.masterlist_logSheetPage);
 
                 // Filter out any MYO slots, reverse and pull the first 4
                 let selectDesigns = designs.filter((i) => { return i.designtype != 'MYO Slot' }).reverse().slice(0, charadexInfo.numOfDesigns);
