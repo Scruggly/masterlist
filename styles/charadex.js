@@ -63,7 +63,7 @@ let optionSorter = (options) => {
     let defaultOptions = {
 
         sheetID: scrubbedSheetId,
-        sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "masterlist",
+        sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "Masterlist",
 
         fauxFolderColumn: userOptions.fauxFolderColumn ? keyCreator(userOptions.fauxFolderColumn) : false,
         filterColumn: userOptions.filterColumn ? keyCreator(userOptions.filterColumn) : false,
@@ -83,7 +83,7 @@ let optionSorter = (options) => {
 /* QOL Funcs
 /* ================================================================ */
 let sheetPage = (id, pageName) => {
-    return `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=${pageName}`
+    return `https://docs.google.com/spreadsheets/d/1T0B8t7CcB_0y6VIpih6bB5-saB8CbZ3rSwDvvVNoO64/gviz/tq?tqx=out:json&headers=1&tq=WHERE A IS NOT NULL&sheet=Masterlist`
 };
 
 let fetchSheet = async (page, sheet = sheetID) => {
